@@ -1,0 +1,35 @@
+{
+  "name": "study-use-github",
+  "version": "1.0.0",
+  "description": "telegram bot to study github and mysql",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "dev": "nodemon bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michapotselyev/study-use-github.git"
+  },
+  "keywords": [
+    "node",
+    "node-telegram-bot-api",
+    "github",
+    "nodemon",
+    "mysql"
+  ],
+  "author": "Mykhailo Potseluiev <hividermen@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/michapotselyev/study-use-github/issues"
+  },
+  "homepage": "https://github.com/michapotselyev/study-use-github#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "mysql2": "^3.9.1",
+    "node-telegram-bot-api": "^0.64.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
