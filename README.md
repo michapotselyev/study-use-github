@@ -10,7 +10,7 @@ This bot is created to automate certain tasks in the Telegram messenger. It is c
 
 1. Clone the repository:
 
-git clone https://github.com/your_username/telegram-bot.git
+git clone [https://github.com/your_username/telegram-bot.git](https://github.com/michapotselyev/study-use-github)
 
 2. Navigate to the project directory:
 
@@ -19,6 +19,8 @@ cd telegram-bot
 3. Install dependencies:
 
 npm install
+
+4. Make .env follow the .sample.env
 
 ## Usage
 
