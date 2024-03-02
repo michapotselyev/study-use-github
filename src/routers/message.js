@@ -5,7 +5,7 @@ async function message(bot, msg) {
 
   switch (msg.text) {
     case '/start':
-      await messageController.introduction(bot, chatId);
+      await messageController.introduction(bot, chatId, msg.from);
       return;
 
     case '/menu':

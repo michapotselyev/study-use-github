@@ -1,19 +1,29 @@
-const menuReplyMarkups = require("../utils/replyMarkups/menuReplyMarkups");
+const messageService = require("../services/message");
+const errorHandler = require("../handlers/errorHandler");
 
 class MessageController {
-  async introduction(bot, chatId) {
-    await bot.sendMessage(chatId, 'Welcome to the best Telegram Shop!');
-    return;
+  async introduction(bot, chatId, user) {
+    try {
+      await messageService.introduction(bot, chatId, user);
+    } catch (error) {
+      await errorHandler.botError(bot, chatId, error);
+    }
   }
 
   async menu(bot, chatId) {
-    await bot.sendMessage(chatId, 'Choose category that you want to see!', { reply_markup: menuReplyMarkups });
-    return;
+    try {
+      await messageService.menu(bot, chatId);
+    } catch (error) {
+      await errorHandler.botError(bot, chatId, error);
+    }
   }
 
   async default(bot, chatId) {
-    await bot.sendMessage(chatId, 'Sorry, I don\'t undestand you (\nPlease use commands or buttons.');
-    return;
+    try {
+      await messageService.default(bot, chatId);
+    } catch (error) {
+      await errorHandler.botError(bot, chatId, error);
+    }
   }
 }
 
